@@ -1,1 +1,1 @@
-export const base_api_url = `http://localhost:8060/auth/v0/`
+export const base_api_url = `https://workwise-backend-220d12yzm-abhchs-projects.vercel.app/auth/v0/`
