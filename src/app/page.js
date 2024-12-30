@@ -16,7 +16,7 @@ export default function Home() {
 
   const fetchSeats = async () => {
     try {
-      const response = await axios.get(`https://workwise-backend-220d12yzm-abhchs-projects.vercel.app/seats`, {
+      const response = await axios.get(`https://workwise-backend-iota.vercel.app/seats`, {
         withCredentials: true,
       });
       setSeats({
@@ -49,7 +49,7 @@ export default function Home() {
     setLoading(true)
     try {
       const response = await axios.post(
-        `https://workwise-backend-220d12yzm-abhchs-projects.vercel.app/seats/reserve`,
+        `https://workwise-backend-iota.vercel.app/seats/reserve`,
         { numberOfSeats: parseInt(numSeatsToBook) },
         { withCredentials: true }
       );
@@ -69,7 +69,7 @@ export default function Home() {
 
   const handleResetBookings = async () => {
     try {
-      const response = await axios.post(`https://workwise-backend-220d12yzm-abhchs-projects.vercel.app/seats/reset`, {
+      const response = await axios.post(`https://workwise-backend-iota.vercel.app/seats/reset`, {
         withCredentials: true,
       });
       toast.success(response?.data?.message);
